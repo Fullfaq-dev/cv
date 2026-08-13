@@ -4,5 +4,32 @@
     { "source": "/human/", "destination": "/human.html" },
     { "source": "/ai", "destination": "/ai.html" },
     { "source": "/ai/", "destination": "/ai.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "all" },
+        { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/ai.html",
+      "headers": [{ "key": "Content-Disposition", "value": "inline" }]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Content-Disposition", "value": "inline" }
+      ]
+    },
+    {
+      "source": "/.well-known/llms.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Content-Disposition", "value": "inline" }
+      ]
+    }
   ]
 }

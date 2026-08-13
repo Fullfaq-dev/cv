@@ -5,4 +5,25 @@ Allow: /ai.html
 Allow: /ai/
 Allow: /ai.json
 Allow: /llms.txt
+Allow: /.well-known/llms.txt
 Allow: /resume/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://maxcv.fun/sitemap.xml

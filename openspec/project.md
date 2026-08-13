@@ -7,7 +7,7 @@
 - React + TypeScript + Vite
 - Vanilla CSS с адаптивной вёрсткой
 - Статический сайт, готовый к деплою на Vercel
-- Корень `/` — выбор версии (две обычные HTML-ссылки). `/human.html` — визуальное портфолио. `/ai.html`, `/llms.txt`, `/ai.json` — машиночитаемый дамп без JS.
+- Корень `/` отдаёт кнопки выбора и полный машиночитаемый CV в том же HTML, чтобы боты вроде ChatGPT не упирались в пустой гейт. Копии: `/ai.html`, `/llms.txt`, `/.well-known/llms.txt`, `/ai.json`.
 
 ## Архитектура
 - `src/aiDump.ts` — сборка машиночитаемого дампа из `src/data.ts` в HTML / llms.txt / JSON.

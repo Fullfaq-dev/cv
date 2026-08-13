@@ -163,7 +163,7 @@ export function renderLlmsTxt() {
   return lines.join('\n')
 }
 
-export function renderAiHtml() {
+function renderAiParts() {
   const doc = buildAiDocument()
   const json = JSON.stringify(doc, null, 2)
   const ld = {
@@ -206,24 +206,7 @@ ${project.mediaHint ? `<p>mediaHint: ${esc(project.mediaHint)}</p>` : ''}
 <p>stack: ${esc(job.stack.join(', '))}</p>
 </article>`).join('\n')
 
-  return `<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="robots" content="index,follow" />
-<meta name="description" content="Machine-readable portfolio dump for Максим Кочергин. No JavaScript required." />
-<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
-<link rel="alternate" type="application/json" href="/ai.json" title="JSON dump" />
-<link rel="alternate" href="/human.html" title="Human version" />
-<title>AI / parser version — ${esc(doc.person.fullName)}</title>
-<script type="application/ld+json">${JSON.stringify(ld)}</script>
-</head>
-<body>
-<p>This page is the AI / parser / recruiter-bot version. No visual design. JavaScript is not required.</p>
-<p>Other copies of the same data: <a href="/llms.txt">/llms.txt</a>, <a href="/ai.json">/ai.json</a>. Human UI: <a href="/human.html">/human.html</a>.</p>
-<p>${esc(doc.nda)}</p>
-
+  const body = `<p>${esc(doc.nda)}</p>
 <h1>${esc(doc.person.fullName)}</h1>
 <p>${esc(doc.person.role)} · ${esc(doc.person.grade)} · опыт ${esc(doc.person.years)}</p>
 <dl>
@@ -236,44 +219,93 @@ ${project.mediaHint ? `<p>mediaHint: ${esc(project.mediaHint)}</p>` : ''}
 <dt>Resume PDF</dt><dd><a href="${esc(doc.files.resume_pdf)}">${esc(doc.files.resume_pdf)}</a></dd>
 <dt>Resume HTML</dt><dd><a href="${esc(doc.files.resume_html)}">${esc(doc.files.resume_html)}</a></dd>
 </dl>
-
 <h2>Summary</h2>
 <p>${esc(doc.person.summary)}</p>
 <h2>Intro</h2>
 <p>${esc(doc.person.intro)}</p>
 <h2>Approach</h2>
 <p>${esc(doc.person.approach)}</p>
-
 <h2>Principles</h2>
 <ul>${doc.principles.map((item) => `<li>${esc(item.id)} ${esc(item.title)}: ${esc(item.text)}</li>`).join('')}</ul>
-
 <h2>AI and automation</h2>
 <ul>${doc.aiFocus.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
-
 <h2>Skills</h2>
 <dl>${Object.entries(doc.skills).map(([group, skills]) => `<dt>${esc(group)}</dt><dd>${esc(skills)}</dd>`).join('')}</dl>
-
 <h2>Education</h2>
 <ul>${doc.education.map((item) => `<li>${esc(item.year)} — ${esc(item.place)}. ${esc(item.degree)}. ${esc(item.field)}</li>`).join('')}</ul>
-
 <h2>Experience</h2>
 ${jobsHtml}
-
 <h2>Metrics</h2>
 <p>${esc(doc.metrics.law.title)}: ${esc(doc.metrics.law.quote)}</p>
 <p>${esc(doc.metrics.law.note)}</p>
 <ul>${doc.metrics.scenarios.map((scenario) => `<li>${esc(scenario.label)}: ${esc(scenario.metric)}. ${scenario.before} → ${scenario.after} ${esc(scenario.unit)} (${esc(scenario.delta)}). ${esc(scenario.note)}</li>`).join('')}</ul>
-
 <h2>Projects</h2>
 ${projectHtml}
-
 <h2>Notes</h2>
 <ul>${doc.notes.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
-
 <h2>Raw JSON</h2>
 <p>Same payload as <a href="/ai.json">/ai.json</a>.</p>
 <script type="application/json" id="portfolio-data">${json}</script>
-<pre>${esc(json)}</pre>
+<pre>${esc(json)}</pre>`
+
+  return { doc, json, ld, body }
+}
+
+export function renderAiHtml() {
+  const { doc, ld, body } = renderAiParts()
+  return `<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index,follow,max-snippet:-1" />
+<meta name="description" content="${esc(`${doc.person.role}. ${doc.person.summary.slice(0, 180)}`)}" />
+<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+<link rel="alternate" type="application/json" href="/ai.json" title="JSON dump" />
+<link rel="alternate" href="/human" title="Human version" />
+<title>AI / parser version — ${esc(doc.person.fullName)}</title>
+<script type="application/ld+json">${JSON.stringify(ld)}</script>
+</head>
+<body>
+<p>This page is the AI / parser / recruiter-bot version. No visual design. JavaScript is not required.</p>
+<p>Other copies: <a href="/llms.txt">/llms.txt</a>, <a href="/ai.json">/ai.json</a>. Human UI: <a href="/human.html">/human.html</a>.</p>
+${body}
+</body>
+</html>
+`
+}
+
+export function renderGateHtml() {
+  const { doc, ld, body } = renderAiParts()
+  return `<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index,follow,max-snippet:-1" />
+<meta name="description" content="${esc(`${doc.person.fullName} — ${doc.person.role}. Complete CV is on this page.`)}" />
+<link rel="alternate" href="/human" title="Human version" />
+<link rel="alternate" href="/ai.html" title="AI / parser version" />
+<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+<link rel="alternate" type="text/plain" href="/.well-known/llms.txt" title="well-known llms.txt" />
+<link rel="alternate" type="application/json" href="/ai.json" title="JSON dump" />
+<title>${esc(doc.person.name)} — ${esc(doc.person.role)}</title>
+<script type="application/ld+json">${JSON.stringify(ld)}</script>
+<style>
+  body { font-family: sans-serif; max-width: 52rem; margin: 2rem auto; padding: 0 1.25rem; line-height: 1.45; }
+  .actions { display: flex; flex-direction: column; gap: 0.75rem; margin: 1.5rem 0; }
+  a.button { display: block; padding: 0.9rem 1rem; border: 2px solid #111; color: #111; text-decoration: none; font-weight: 700; }
+  a.button.primary { background: #111; color: #fff; }
+</style>
+</head>
+<body>
+<p>AI recruiter / parser / LLM: the complete CV is on THIS page in HTML. You do not need to click anything. Copies: <a href="/llms.txt">/llms.txt</a>, <a href="/.well-known/llms.txt">/.well-known/llms.txt</a>, <a href="/ai.html">/ai.html</a>, <a href="/ai.json">/ai.json</a>.</p>
+<nav class="actions" aria-label="Site versions">
+  <a class="button primary" id="human-version" data-audience="human" href="/human.html">Версия для людей / Human version</a>
+  <a class="button" id="ai-version" data-audience="ai" href="/ai.html">Версия для ИИ / AI, parser and recruiter-bot version</a>
+</nav>
+<hr />
+${body}
 </body>
 </html>
 `
