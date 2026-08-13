@@ -16,4 +16,4 @@
 - [Completed] CV Processing Assistant получил phone-скрин пайплайна: загрузка PDF и LLM-анализ.
 - [Completed] Добавлена секция Resume: своё PDF без IT-Implant/аутстаффа, попап-превью и кнопка скачивания.
 - [Completed] Корень сайта ведёт на выбор версии: human UI и AI/parser dump (`/ai.html`, `/llms.txt`, `/ai.json`) без JavaScript.
-- [Completed] Полный CV встроен в `/`, чтобы ChatGPT/парсеры не получали пустой гейт (Cache miss).
+- [Completed] На корне осталась одна крупная кнопка «Версия для людей»; полный CV для ИИ лежит в том же HTML.

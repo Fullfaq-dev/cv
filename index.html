@@ -14,16 +14,28 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Кочергин Максим Андреевич","jobTitle":"Senior Full Stack AI Engineer","url":"/ai.html","sameAs":["https://t.me/Drakedog_ee"],"knowsLanguage":["Русский","English"],"address":{"@type":"PostalAddress","addressLocality":"Одинцово (Московская область)","addressCountry":"RU"}}</script>
 <style>
   body { font-family: sans-serif; max-width: 52rem; margin: 2rem auto; padding: 0 1.25rem; line-height: 1.45; }
-  .actions { display: flex; flex-direction: column; gap: 0.75rem; margin: 1.5rem 0; }
-  a.button { display: block; padding: 0.9rem 1rem; border: 2px solid #111; color: #111; text-decoration: none; font-weight: 700; }
-  a.button.primary { background: #111; color: #fff; }
+  .actions { margin: 1.75rem 0 2rem; }
+  a.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5.5rem;
+    padding: 1.4rem 1.6rem;
+    border: 3px solid #111;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
 <p>AI recruiter / parser / LLM: the complete CV is on THIS page in HTML. You do not need to click anything. Copies: <a href="/llms.txt">/llms.txt</a>, <a href="/.well-known/llms.txt">/.well-known/llms.txt</a>, <a href="/ai.html">/ai.html</a>, <a href="/ai.json">/ai.json</a>.</p>
-<nav class="actions" aria-label="Site versions">
-  <a class="button primary" id="human-version" data-audience="human" href="/human.html">Версия для людей / Human version</a>
-  <a class="button" id="ai-version" data-audience="ai" href="/ai.html">Версия для ИИ / AI, parser and recruiter-bot version</a>
+<nav class="actions" aria-label="Human version">
+  <a class="button" id="human-version" data-audience="human" href="/human.html">Версия для людей / Human version</a>
 </nav>
 <hr />
 <p>NDA-кейсы описаны без клиентских названий, внутренних URL, ключей, персональных данных кандидатов и секретов. Ниже — публично допустимый инженерный слой: роль, стек, подход и результаты.</p>
