@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"],
+    "outDir": ".tmp/ts-node",
+    "rootDir": "."
+  },
+  "include": ["vite.config.ts", "src/data.ts", "src/aiDump.ts"]
+}

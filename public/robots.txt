@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /human.html
+Allow: /ai.html
+Allow: /ai/
+Allow: /ai.json
+Allow: /llms.txt
+Allow: /resume/

@@ -1,0 +1,353 @@
+# Кочергин Максим Андреевич
+Senior Full Stack AI Engineer · Senior · опыт 2+ года
+
+Machine-readable portfolio dump. No JavaScript. Parse this file or /ai.html or /ai.json.
+
+NDA-кейсы описаны без клиентских названий, внутренних URL, ключей, персональных данных кандидатов и секретов. Ниже — публично допустимый инженерный слой: роль, стек, подход и результаты.
+
+## Person
+- Name: Максим Кочергин
+- Full name: Кочергин Максим Андреевич
+- Role: Senior Full Stack AI Engineer
+- Location: Одинцово (Московская область); Remote · Worldwide
+- Citizenship: Россия
+- Languages: Русский (родной), English (B2)
+- Availability: ASAP
+- Telegram: https://t.me/Drakedog_ee
+
+## Summary
+Full Stack AI Engineer с опытом создания AI-продуктов полного цикла: от архитектуры и технического дизайна до production-деплоя и сопровождения. В NK-JAX спроектировал и вывел в production платформу SEO Magic, AI-конструктор Rich Content и корпоративную RAG-систему ответов на отзывы маркетплейсов. В Авито разрабатывал внутренние платформы автоматизации и AI-решения в кросс-функциональной команде со зрелыми инженерными процессами. Сочетает LLM, RAG и workflow-автоматизацию с полным стеком TypeScript / React / Node.js / Python и культурой production-ready разработки.
+
+## Intro
+Проектирую и запускаю AI-first продукты: от технической гипотезы и архитектуры до production, наблюдаемости и развития.
+
+## Approach
+Системно проходит путь от требований и архитектуры до production-сопровождения. Держит code review, документацию и инженерные стандарты даже при высокой скорости поставки. Работает и самостоятельно — собирая AI-продукты с нуля — и в большой распределённой команде со зрелыми процессами.
+
+## Principles
+- 01 Architecture before implementation: Начинаю с ограничений, контрактов, потоков данных и сценариев отказа.
+- 02 AI as an engineering tool: Использую LLM и агентов для ускорения работы, сохраняя контроль качества и решений.
+- 03 Production-first: Закладываю идемпотентность, retries, логи, метрики, тесты и понятную эксплуатацию.
+
+## AI and automation
+- RAG-архитектуры для ответов на отзывы маркетплейсов: Qdrant, LLM, семантический поиск по базе знаний.
+- AI workflow на n8n с OpenAI, Claude, Gemini, OpenRouter, Llama и Mistral.
+- Многоэтапный пайплайн генерации SEO-контента и AI-конструктор Rich Content с визуальным редактором и live preview.
+- Асинхронные пайплайны и event-driven архитектура для AI-систем; векторные БД: Qdrant, pgvector, ChromaDB.
+- Claude Code и AI-агенты как инженерный инструмент: разработка, рефакторинг, тесты и документация.
+
+## Skills
+- Languages: TypeScript · Python · JavaScript · SQL
+- Frontend: React · Next.js · Vite · Tailwind CSS
+- Backend: Node.js · FastAPI · PostgreSQL · Supabase · Redis
+- AI: OpenAI · Claude · Gemini · RAG · Agents · Prompt / Context Engineering · On-device ML
+- Automation: n8n · RabbitMQ · Webhooks · Event-driven architecture · Bitrix24
+- Data & DevOps: Qdrant · pgvector · Docker · Kubernetes · GitLab CI/CD · Linux
+
+## Education
+- 2023 — МГТУ им. Н. Э. Баумана. Бакалавр, факультет биомедицинской техники. Автоматизация технологических процессов и производств
+- 2017 — Медицинский университет «Реавиз», Самара. Высшее, стоматологический факультет. Стоматология
+
+## Experience (detailed)
+### Авито — Инженер по автоматизации бизнес-процессов / AI Full Stack Developer (07.2025 — 01.2026)
+Внутренние платформы автоматизации и AI-решения для корпоративных сервисов.
+- Проектировал сервисы автоматизации, workflow и интеграции между внутренними системами и API.
+- Разрабатывал AI-оркестрацию процессов на n8n; работал с отказоустойчивостью, наблюдаемостью и обратной совместимостью.
+- Готовил RFC, API-контракты и архитектурные схемы; участвовал в обязательном code review и Agile-цикле команды.
+Stack: TypeScript, Node.js, PostgreSQL, n8n, Docker, GitLab, REST API
+
+### NK-JAX — Senior Full Stack AI Engineer (06.2024 — 07.2025)
+AI-first продукты для e-commerce: генерация SEO и Rich Content, автоматизация отзывов на базе LLM и RAG.
+- Вёл продукты с нуля: TDR, API-контракты, архитектура, разработка, деплой и сопровождение.
+- Собрал SEO Magic, конструктор Rich Content и RAG-платформу отзывов с RabbitMQ, Qdrant и интеграцией ERP.
+- Настраивал GitLab CI/CD, Docker и production на Linux; держал модульную архитектуру, тесты и code review.
+Stack: TypeScript, React, Node.js, PostgreSQL, Supabase, n8n, RabbitMQ, Qdrant, OpenAI, Claude, Docker, GitLab CI/CD
+
+### Axioma — Fullstack-разработчик (09.2023 — 06.2024)
+AI-сервисы и автоматизация бизнес-процессов: RAG, Python backend, интеграции и клиентский веб.
+- Строил Python API, RAG для документов и отзывов, подключал векторные БД и LLM.
+- Настраивал n8n, очереди и вебхуки; обеспечивал идемпотентную обработку задач и Docker-деплой.
+- Провёл миграцию данных, тестировал ETL и масштабировал серверную инфраструктуру.
+Stack: Python, n8n, Docker, PostgreSQL, RAG, LLM, REST API, Webhooks
+
+## Metrics note
+Закон Гудхарта: Когда метрика становится целью, она перестаёт быть хорошей метрикой.
+Ниже — проектные ориентиры для оценки эффекта: их нужно сверять с production-аналитикой перед использованием как фактических KPI.
+
+- SEO Magic: Подготовка SEO-материала. 240 → 25 мин (−90%). Черновик с ключами, структурой и оформлением вместо ручного старта с нуля.
+- AI Matching: Ручной разбор до shortlist. 180 → 15 мин (−92%). Векторный pre-filter убирает нерелевантные пары до детального анализа.
+- Operational Recovery: Ручная нагрузка команды. 3.22 → 0.4 FTE / мес (до −88%). Подтверждённый потенциал высвобождения — до 3,22 FTE в месяц; остаток — контроль исключений.
+- ONEpage Bot: От описания до публикации. 120 → 5 мин (−96%). AI-генерация, preview, wildcard DNS и публикация — в одном Telegram-flow.
+- Financial Reconciliation: Ручной контроль одного прогона. 45 → 5 мин (−89%). Оркестрация статусов, логов и непустых error-файлов без ручного ожидания ноутбука.
+
+## Projects
+### Rangor
+- id: rangor
+- kind: public
+- eyebrow: Context layer for engineering teams
+- description: SaaS, который собирает решения, риски и актуальные факты задачи из Jira, Confluence, GitHub, Slack и Drive в единый permission-aware briefing для инженеров и AI-агентов.
+- url: https://rangor.io/
+- embed: https://rangor.io/
+- impact:
+  - Контекст задачи вместо ручного поиска и копирования между системами.
+  - Context Guard проверяет PR на противоречия ранее принятым решениям до merge.
+  - Единый UCP-пакет с происхождением фактов, конфликтами и изменениями контекста.
+- stack: React, TypeScript, Node.js, PostgreSQL, Temporal Graph, GitHub App, Jira, Confluence, Slack, Google Drive, MCP, OAuth, ACL / ReBAC, UCP
+- metrics:
+  - ~2–4× меньше контекста на типовой задаче
+  - До 15× сжатие длинных обсуждений без потери решений
+  - Контекст задачи: минуты → секунды
+
+### ShadowGPT
+- id: shadowgpt
+- kind: public
+- eyebrow: Shadow AI protection · Chrome extension
+- description: Расширение и cloud dashboard для контроля Shadow AI: мониторинг промптов и вложений в ChatGPT, Claude, Gemini и других сервисах до утечки корпоративных данных. Расширение уже доступно в Google Chrome Web Store / App Market.
+- url: https://shadowgpt.app/
+- embed: https://shadowgpt.app/
+- impact:
+  - Уникальная архитектура: ML-модель встроена прямо в расширение и анализирует данные локально на устройстве.
+  - В отличие от типичных «AI DLP», где проверка ПДн уходит на LLM разработчика (и данные всё равно утекают), здесь prompt/файлы не отправляются на сервер — в облако уходят только метаданные и уровень риска.
+  - Многослойный детект: regex → custom rules → NER/PII → локальный LLM; перехват PDF/DOCX/кода и OCR изображений.
+  - Privacy Mode: анонимизация чувствительных полей перед отправкой в публичные AI-сервисы; админский dashboard для политик и аудита.
+- stack: Chrome Extension (MV3), TypeScript, On-device ML, Web Worker, NER / Presidio, Regex, OCR, PII Detection, Cloud Dashboard, Policy Engine, Audit Log
+- metrics:
+  - 0 байт prompt/файлов в облако при local mode
+  - 4 уровня проверки до отправки запроса
+  - 19+ AI-сервисов под мониторингом
+
+### Axioma8
+- id: axioma8
+- kind: public
+- eyebrow: AI orchestration platform
+- description: Платформа автоматизации на базе ИИ: управляемые пайплайны, политики, RAG и агенты. Акцент не на «умности модели», а на воспроизводимых, проверяемых и встраиваемых в бизнес-контур выводах.
+- url: https://axioma8.ru/
+- embed: https://axioma8.ru/
+- impact:
+  - Стек слоями: данные → знания → оркестрация → модели → контроль; модели — сменяемый слой.
+  - Визуальная оркестрация workflow/chatflow, human-in-the-loop, версии пайплайнов и трассировка решений.
+  - RAG, агентный фреймворк, REST API для встраивания в корпоративные сервисы.
+  - Правила, политики доступа, аудит и валидация — чтобы AI-выводы можно было объяснить и масштабировать.
+- stack: LLMOps, RAG, Embeddings, Agent Framework, Visual Workflow, REST API, Prompt Orchestration, Policy Engine, Human-in-the-loop, Audit / Tracing
+- metrics:
+  - Настройка AI workflow: недели → дни
+  - 1 управляемый контур вместо набора разрозненных AI-интеграций
+  - 100% версионируемых правил и пайплайнов
+
+### Hiremi
+- id: hiremi
+- kind: public
+- eyebrow: AI-рекрутер · интеграция с Bitrix24
+- description: Продуктовый AI-рекрутер с глубокой интеграцией Bitrix24: помогает рекрутинговой команде быстрее обрабатывать поток кандидатов и вести подбор внутри CRM, не меняя рабочий контур.
+- url: https://hiremi.ru/
+- embed: https://hiremi.ru/
+- impact:
+  - Интеграция с Bitrix24: стадии, карточки, ответственные и действия рекрутера живут в CRM.
+  - AI-автоматизация рутинных этапов подбора без отдельного изолированного инструмента.
+  - Прозрачные статусы и сценарии вокруг CRM-процесса, а не вокруг чат-бота «сбоку».
+- stack: Bitrix24 REST API, Webhooks, LLM, AI Automation, Workflow Engine, CRM Integration, SaaS, Role-based Access
+- metrics:
+  - До 60% меньше ручных действий рекрутера в типовом сценарии
+  - Карточка кандидата: минуты ручного разбора → <1 минуты AI-подготовки
+  - 1 рабочее место вместо переключения между CRM и отдельным AI-инструментом
+
+### ONEpage Bot
+- id: onepage
+- kind: public
+- eyebrow: Telegram → link-in-bio factory
+- description: Telegram-бот, который по одному описанию и медиа собирает link-in-bio страницу, сразу деплоит её, вешает поддомен через wildcard DNS и отдаёт метрики посещений и кликов.
+- url: https://annatarieli.onepage.ink/
+- phonePreview: https://annatarieli.onepage.ink/
+- galleryLayout: phone
+- impact:
+  - Сценарий: brief + фото → AI-генерация HTML → preview → publish на `{slug}.domain`.
+  - Wildcard-инфраструктура и renderer: каждая страница кастомизируется, версионируется и живёт как самостоятельный сайт.
+  - Очередь worker’ов (BullMQ), биллинг, рефералка, админка и аналитика трафика по ссылкам.
+  - Monorepo: Fastify API, grammY bot, AI worker, Nginx/S3, PostgreSQL + Redis.
+- stack: TypeScript, pnpm Workspaces, Telegram / grammY, Fastify, BullMQ, PostgreSQL 16, Drizzle ORM, Redis 7, S3 / MinIO, Nginx, Wildcard DNS, OpenAI / Anthropic, Docker Compose
+- metrics:
+  - Описание → опубликованная страница: ~5 минут
+  - 0 ручных действий DevOps для выдачи поддомена
+  - 7 дней TTL для preview + автоматическая очистка
+- gallery:
+  - /onepage/bot-home.png — Главное меню Telegram-бота ONEpage
+  - /onepage/bot-page.png — Управление опубликованной страницей в Telegram-боте ONEpage
+  - /onepage/bot-stats.png — Статистика просмотров и кликов в Telegram-боте ONEpage
+
+### SEO Magic
+- id: seo-magic
+- kind: nda
+- eyebrow: NDA · Content factory for SEO & marketplaces
+- description: Контент-завод для SEO-статей и медиа под маркетплейсы: многоступенчатые AI-агенты, очереди задач, студия карточек и конструктор вертикального RICH-контента.
+- url: https://ai-designer-pres.vercel.app/
+- embed: https://ai-designer-pres.vercel.app/
+- impact:
+  - Генерация SEO-текстов по keyword + LSI: информационные, продающие и экспертные форматы.
+  - Асинхронный пайплайн: токены → job в БД → webhook n8n → polling статуса → результат/экспорт.
+  - AI-конструктор RICH-полотна для МП: OCR, анализ визуала, блоки Hero/USP/характеристики, drag-and-drop и единый вертикальный экспорт.
+  - Управление промптами, историей задач, биллингом токенов, доступом и support-контуром.
+- stack: React 18, Vite, TypeScript, Tailwind CSS, Radix UI, Framer Motion, TanStack Query, React Router, React Hook Form, Zod, Supabase, PostgreSQL, Storage, n8n, LLM Agents, OCR
+- metrics:
+  - Подготовка SEO-материала: ~3–5 часов → 20–30 минут
+  - RICH-полотно: несколько ручных макетов → 1 AI-пайплайн до 60 секунд
+  - До 70% меньше времени на черновой контент и оформление
+
+### AI Matching Platform
+- id: matching
+- kind: nda
+- eyebrow: NDA · HR automation · Bitrix24
+- description: Сервис семантического сопоставления вакансий и кандидатов с интеграцией Bitrix24: синхронизирует изменения по вебхукам, формирует векторный shortlist и даёт объяснимую оценку соответствия.
+- impact:
+  - Интеграция с Bitrix24: роботы/вебхуки на воронках, pull через REST API, опциональные уведомления менеджерам.
+  - Двухэтапный отбор: vector pre-filter (pgvector) и глубокий LLM-анализ только релевантных пар.
+  - Кэширование по хэшам исходных данных, чтобы не пересчитывать неизменившиеся сущности.
+  - Ролевая web-панель с сортировкой, фильтрами, историей и ручным пересчётом.
+- stack: Python, FastAPI, Pydantic, SQLAlchemy, PostgreSQL 16, pgvector, Celery, Redis, Bitrix24 REST API, Webhooks, OpenAI-compatible LLM, Embeddings, JWT, Docker Compose, Nginx
+- metrics:
+  - Shortlist: часы ручного разбора → ~10–15 минут
+  - До 80% меньше CV на ручной детальный разбор за счёт pre-filter
+  - LLM-расходы до 10–50× ниже благодаря кэшированию и rerank
+- mediaHint: Здесь можно разместить скриншот дашборда матчинга
+
+### AI Candidate Sourcer
+- id: sourcer
+- kind: nda
+- eyebrow: NDA · Recruitment ops · Bitrix24
+- description: Система первичного сорсинга под заявки с интеграцией Bitrix24: переводит требования в поисковую стратегию, ранжирует результаты и оставляет решение о передаче кандидата за рекрутером.
+- impact:
+  - Интеграция с Bitrix24: запуск по стадии заявки, Workplace UI внутри CRM, передача кандидата в воронку найма по кнопке рекрутера.
+  - n8n как ingress-оркестратор; доменное ядро на FastAPI с адаптерами CRM/source.
+  - Асинхронные worker-процессы: поиск, анализ CV, коммуникации, CRM-операции.
+  - Детерминированная оценка поверх LLM-фактов: объяснимые критерии, пороги GOAL×K и аудит.
+- stack: Python 3.12, FastAPI, Pydantic v2, SQLAlchemy 2.0, Alembic, Celery, Redis 7, PostgreSQL 16, pgvector, TimescaleDB, n8n, Bitrix24 REST API, Webhooks, React / Vue, Docker Compose, Nginx, Playwright
+- metrics:
+  - Сбор первичного shortlist: часы → 15–30 минут
+  - До 70% меньше CV открывается для глубокого анализа
+  - Целевой результат: 3 годных кандидата × коэффициент конверсии без ручной рутины
+- mediaHint: Здесь можно разместить схему пайплайна или экран workplace-интерфейса
+
+### CV Processing Assistant
+- id: cv-robot
+- kind: nda
+- eyebrow: NDA · Document intelligence
+- description: Корпоративный Telegram-ассистент для приёма резюме, извлечения структурированных данных и подготовки документов по единому шаблону.
+- galleryLayout: phone
+- impact:
+  - Обработка PDF, DOCX и ссылок с дедупликацией по составному SHA-256 хэшу.
+  - LLM извлекает данные в валидируемую JSON-схему; предусмотрен fallback провайдера.
+  - Контроль доступа, аудит, TTL хранения и повторная выдача результата из кэша.
+- stack: Python, FastAPI, aiogram / python-telegram-bot, Apache Tika, OpenAI GPT-4.1 mini, YandexGPT fallback, LiteLLM, Redis, PostgreSQL, MinIO, docxtpl, Docker Compose
+- metrics:
+  - Подготовка CV: ~20 минут → 1–2 минуты
+  - Кэш-повтор: секунды вместо полного повторного pipeline
+  - До 95% повторных материалов обрабатываются без вызова LLM
+- gallery:
+  - /cv/pipeline.png — Приём PDF-резюме и статус LLM-анализа в Telegram-боте
+
+### Financial Reconciliation Automation
+- id: fincheck
+- kind: nda
+- eyebrow: NDA · RPA / data workflows
+- description: Production-контур финансовой сверки между внутренними системами и внешними партнёрами: n8n оркестрирует файлы, статусы и ветвления сценариев, а изолированный runner headless исполняет версионируемые Jupyter-ноутбуки бизнес-логики.
+- impact:
+  - Зона ответственности: интеграция тяжёлого Jupyter-шага в общий n8n-пайплайн без UI-автоматизации «как человек кликает».
+  - Разделение оркестрации и вычислений: sub-workflow принимает Excel + тип обработки, выбирает актуальный `.ipynb` из VCS и запускает papermill/runner по HTTP.
+  - Постобработка: сбор только непустых error-файлов, флаг ошибок upstream, retry, таймауты, логи `execution_id` и алерты в мессенджер.
+  - Production-ready путь: микросервис Jupiter Runner (FastAPI) с изоляцией Python/DWH, версионированием ноутбуков и E2E на реальном партнёрском файле.
+- stack: n8n, FastAPI, Python 3.10+, Jupyter, Papermill, nbconvert, nbclient, pandas, openpyxl, Excel, HTTP API, DWH, Stash / Git, Docker, Mattermost
+- metrics:
+  - Запуск сверки: ~30–60 минут ручного контроля → 1 workflow
+  - 100% прогонов получают execution_id, логи и статус
+  - Только непустые error-файлы попадают в дальнейший разбор
+- mediaHint: Здесь можно разместить схему workflow n8n и runner API
+
+### Operational Recovery Workflow
+- id: breaks
+- kind: nda
+- eyebrow: NDA · Business-process automation
+- description: Технический дизайн и реализация отказоустойчивого RPA-процесса ежедневного восстановления и балансировки операционных расписаний: сначала восстановление обязательных активностей, затем перенос интервалов под покрытие линии.
+- impact:
+  - Формализация двух связанных процессов: recovery обязательных окон и coverage balancing без создания новых провалов.
+  - Интеграции: чтение расписаний/покрытия из БД, запись изменений через UI/API целевой системы, уведомления (Mattermost/email) по исключениям.
+  - Правила по типам графиков и контейнеров, запрет трогать вручную проставленные активности, пакетная публикация и пересчёт метрик покрытия.
+  - TDR-уровень: security, аудит действий робота, мониторинг success rate, SLA по приоритетам инцидентов и обоснование выбора n8n.
+- stack: n8n, PostgreSQL, SQL, REST API, Web UI automation, Mattermost, SMTP / Email, Monitoring, Audit Log, Retry / Error Handling
+- metrics:
+  - До 3,22 FTE/месяц освобождается от ручных операций
+  - Ежедневная обработка расписаний: часы → автоматический запуск до смены
+  - ≥99% успешных запусков — целевой SLA
+- mediaHint: Здесь можно разместить архитектурную схему To Be / потоков данных
+
+### Tarot Bot · Rich UX
+- id: tarot
+- kind: nda
+- eyebrow: NDA · Telegram product with rich markup
+- description: Премиальный Telegram-бот таро/эзотерики с богатой визуальной разметкой: расклады с реальной колодой карт, память диалога, воронки продуктов, голос/vision и отдельная веб-админка.
+- galleryLayout: phone
+- impact:
+  - Rich markup: отправка изображений выпавших карт из локальной колоды 78 карт, а не «AI-картинок».
+  - AI-оркестрация интерпретаций (таро, нумерология, астрология), long-term memory и relationship memory.
+  - Монетизация: фиксированные продукты, мини→полная воронка, комбо и подписки; платежные callback’и.
+  - Production: FastAPI + aiogram, Redis FSM, PostgreSQL, Docker Compose, nginx/SSL, admin SPA.
+- stack: Python 3.12, FastAPI, aiogram 3, SQLAlchemy Async, asyncpg, Alembic, Redis FSM, KIE.ai, Whisper, ElevenLabs, GPT Image, Robokassa / Platega, React Admin SPA, Docker Compose, Nginx
+- metrics:
+  - Время ответа на расклад: минуты ожидания эксперта → <30 секунд
+  - 78 карт: 100% раскладов с тематическим rich media
+  - Мини-расклад → полный: измеряемая продуктовая воронка
+- gallery:
+  - /tarot/home.png — Приветствие, баланс и категории в Telegram-боте таро
+  - /tarot/menu.png — Меню раскладов, баланса и настроек в Telegram-боте таро
+  - /tarot/spread.png — Расклад «выбор решения» с картами колоды
+  - /tarot/palm.png — Хиромантия: инфографика ладони и интерпретация
+
+### Reviews Intelligence BI
+- id: reviews-bi
+- kind: nda
+- eyebrow: NDA · Marketplace reviews analytics
+- description: Аналитическая BI-платформа по отзывам маркетплейсов: сбор, фильтрация, дашборды, студия промптов и AI-инсайты для продуктовых и коммерческих команд. Название клиента скрыто.
+- galleryLayout: wide
+- impact:
+  - Self-hosted dashboard: отзывы по моделям/датам, RBAC-флаги доступа, serverless/API слой поверх PostgreSQL.
+  - Контур продаж/пенетрации: ingest ERP-событий, нормализация buyer facts, справочники и time series.
+  - Prompt studio и GPT-insights для регулярного разбора тональности и сигналов из отзывов.
+  - Стек: React + Vite + Recharts, Supabase/PostgREST, gated UI под роли.
+- stack: React 18, Vite, Tailwind CSS, React Router, Recharts, Supabase, PostgreSQL, PostgREST, Vercel Serverless Functions, Node.js, LLM Insights, Prompt Studio, RBAC
+- metrics:
+  - Сводка отзывов: дни Excel-анализа → интерактивный dashboard
+  - 100% доступа к BI контролируется ролями
+  - Инсайты по отзывам: еженедельный анализ → по запросу
+- gallery:
+  - /reviews/overview.png — Дашборд анализа отзывов: тональность, инсайты и динамика
+
+### Industrial Energy Metering Platform
+- id: energy-platform
+- kind: nda
+- eyebrow: NDA · Industrial energy consumption
+- description: Веб-платформа учёта и анализа потребления электроэнергии на промышленном предприятии: ввод показаний по линиям/участкам, коэффициенты трансформации, сводки и отчёты.
+- galleryLayout: wide
+- impact:
+  - Каталог счётчиков (АСКУЭ / техучёт) с коэффициентами, начальными показаниями и привязкой к производственным линиям.
+  - Ежемесячный ввод, расчёт потребления, сводки по линиям и выгрузка отчётности.
+  - React/Vite UI, Supabase как хранилище показаний и пользователей, отчётные SQL-вьюхи.
+  - Фокус на прозрачности энергобаланса цеха без ручных Excel-сводок.
+- stack: React, Vite, JavaScript, Tailwind CSS, Supabase, PostgreSQL, SQL Views, Recharts, ExcelJS, Vercel, REST API
+- metrics:
+  - Сводка потребления: дни ручной консолидации → <15 минут
+  - 25+ точек учёта в одном интерфейсе
+  - 100% показаний проходят валидацию коэффициентов до отчёта
+- gallery:
+  - /energy/statement.png — Ведомость учёта потребления электроэнергии
+  - /energy/consumption.png — Сводка потребления и стоимости электроэнергии
+
+## Files
+- human_version: /human.html
+- ai_html: /ai.html
+- llms_txt: /llms.txt
+- json: /ai.json
+- resume_html: /resume/index.html
+- resume_pdf: /resume/kochergin-maxim.pdf
+- resume_download_name: Kochergin-Maxim-AI-Engineer.pdf
+
+## Notes
+- Метрики в проектах — проектные ориентиры, не аудированные KPI, кроме явно указанного FTE в Operational Recovery.
+- Публичные продукты можно открывать по url/embed. NDA-проекты без публичного URL.

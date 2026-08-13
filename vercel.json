@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/human", "destination": "/human.html" },
+    { "source": "/human/", "destination": "/human.html" },
+    { "source": "/ai", "destination": "/ai.html" },
+    { "source": "/ai/", "destination": "/ai.html" }
+  ]
+}

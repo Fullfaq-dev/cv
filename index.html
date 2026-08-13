@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Портфолио Максима Кочергина. Две версии: для людей и для ИИ / парсеров." />
+    <link rel="alternate" href="/ai.html" title="AI / parser version" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    <link rel="alternate" type="application/json" href="/ai.json" title="JSON dump" />
+    <title>Максим Кочергин — выбрать версию</title>
+    <style>
+      body { font-family: sans-serif; max-width: 42rem; margin: 12vh auto; padding: 0 1.25rem; line-height: 1.45; }
+      h1 { font-size: 1.5rem; }
+      p { color: #222; }
+      .actions { display: flex; flex-direction: column; gap: 0.75rem; margin: 1.5rem 0; }
+      a.button {
+        display: block;
+        padding: 0.9rem 1rem;
+        border: 2px solid #111;
+        color: #111;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      a.button.primary { background: #111; color: #fff; }
+      ul { padding-left: 1.2rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Максим Кочергин — Senior Full Stack AI Engineer</h1>
+    <p>Выберите версию сайта. Обе ссылки обычные HTML-ссылки: их можно нажать руками, открыть курсором, перейти из скрипта или скормить парсеру.</p>
+
+    <nav class="actions" aria-label="Версии сайта">
+      <a class="button primary" id="human-version" data-audience="human" href="/human.html">
+        Версия для людей / Human version
+      </a>
+      <a class="button" id="ai-version" data-audience="ai" href="/ai.html">
+        Версия для ИИ / AI, parser and recruiter-bot version
+      </a>
+    </nav>
+
+    <h2>Прямые URL</h2>
+    <ul>
+      <li><a href="/human.html">/human.html</a> — визуальное портфолио</li>
+      <li><a href="/ai.html">/ai.html</a> — полный дамп без оформления</li>
+      <li><a href="/llms.txt">/llms.txt</a> — тот же дамп plain text</li>
+      <li><a href="/ai.json">/ai.json</a> — тот же дамп JSON</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Максим Кочергин — Senior Full Stack AI Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --ink: #20211f;
+        --muted: #5d6059;
+        --line: #d7d4cc;
+        --paper: #f8f7f3;
+        --cream: #f4f2ec;
+        --accent: #ef5e42;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--cream); color: var(--ink); font-family: Manrope, Arial, sans-serif; }
+      body { padding: 28px 16px 48px; }
+      .sheet {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 28px 40px 32px;
+        background: var(--paper);
+        box-shadow: 0 18px 60px rgba(0, 0, 0, .08);
+      }
+      .kicker { margin: 0 0 8px; color: var(--accent); font: 11px/1.4 "DM Mono", monospace; text-transform: uppercase; letter-spacing: .04em; }
+      h1 { margin: 0 0 6px; font-size: 36px; line-height: .92; letter-spacing: -.05em; }
+      h1 em { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 500; }
+      .role { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
+      .meta { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+      .meta span {
+        border: 1px solid var(--line);
+        border-radius: 99px;
+        padding: 5px 9px;
+        color: #555951;
+        font: 10px/1.4 "DM Mono", monospace;
+      }
+      .lead { max-width: 800px; margin: 0 0 18px; color: #3f413d; font-size: 13.5px; line-height: 1.55; }
+      h2 {
+        margin: 18px 0 8px;
+        color: var(--accent);
+        font: 11px/1.4 "DM Mono", monospace;
+        text-transform: uppercase;
+        letter-spacing: .04em;
+      }
+      .skills { display: grid; grid-template-columns: 140px 1fr; gap: 5px 16px; margin: 0; }
+      .skills dt { color: #526057; font: 10px/1.45 "DM Mono", monospace; text-transform: uppercase; }
+      .skills dd { margin: 0; font-size: 12.5px; line-height: 1.45; }
+      .ai-list, .job ul { margin: 0; padding-left: 17px; color: #3f413d; font-size: 13px; line-height: 1.5; }
+      .ai-list li, .job ul li { margin-bottom: 4px; }
+      .job { padding: 12px 0; border-top: 1px solid var(--line); }
+      .job-head { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; margin-bottom: 4px; }
+      .job h3 { margin: 0; font-size: 16px; letter-spacing: -.03em; }
+      .job time { color: #7a7c74; font: 11px/1.4 "DM Mono", monospace; }
+      .job .company { margin: 0 0 6px; color: var(--accent); font: 11px/1.4 "DM Mono", monospace; text-transform: uppercase; }
+      .job .summary { margin: 0 0 8px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+      .tech { margin: 8px 0 0; color: #656860; font-size: 11.5px; }
+      .edu { display: grid; gap: 8px; }
+      .edu p { margin: 0; font-size: 13px; line-height: 1.45; }
+      .edu strong { display: block; margin-bottom: 1px; }
+      .edu span { color: var(--muted); }
+      .qualities { margin: 0; color: #3f413d; font-size: 13px; line-height: 1.55; }
+      footer { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); color: #7a7c74; font: 10px/1.4 "DM Mono", monospace; text-transform: uppercase; }
+      @media print {
+        body { padding: 0; background: #fff; }
+        .sheet { max-width: none; padding: 0; box-shadow: none; }
+        .job { break-inside: avoid; }
+        a { color: inherit; text-decoration: none; }
+      }
+      @page { size: A4; margin: 12mm; }
+    </style>
+  </head>
+  <body>
+    <article class="sheet">
+      <p class="kicker">Resume / 2026</p>
+      <h1>Максим <em>Кочергин</em></h1>
+      <p class="role">Senior Full Stack AI Engineer</p>
+      <div class="meta">
+        <span>Senior</span>
+        <span>Опыт 2+ года</span>
+        <span>Одинцово · Remote</span>
+        <span>Россия</span>
+        <span>English — B2</span>
+        <span>Готовность: ASAP</span>
+        <span>t.me/Drakedog_ee</span>
+      </div>
+
+      <p class="lead">
+        Full Stack AI Engineer с опытом создания AI-продуктов полного цикла: от архитектуры и технического дизайна до production-деплоя и сопровождения.
+        В NK-JAX спроектировал и вывел в production платформу SEO Magic, AI-конструктор Rich Content и корпоративную RAG-систему ответов на отзывы маркетплейсов.
+        В Авито разрабатывал внутренние платформы автоматизации и AI-решения в кросс-функциональной команде со зрелыми инженерными процессами.
+        Сочетает LLM, RAG и workflow-автоматизацию с полным стеком TypeScript / React / Node.js / Python и культурой production-ready разработки.
+      </p>
+
+      <h2>ИИ и автоматизация</h2>
+      <ul class="ai-list">
+        <li>RAG-архитектуры для ответов на отзывы маркетплейсов: Qdrant, LLM, семантический поиск по базе знаний.</li>
+        <li>AI workflow на n8n с OpenAI, Claude, Gemini, OpenRouter, Llama и Mistral.</li>
+        <li>Многоэтапный пайплайн генерации SEO-контента и AI-конструктор Rich Content с визуальным редактором и live preview.</li>
+        <li>Асинхронные пайплайны и event-driven архитектура для AI-систем; векторные БД: Qdrant, pgvector, ChromaDB.</li>
+        <li>Claude Code и AI-агенты как инженерный инструмент: разработка, рефакторинг, тесты и документация.</li>
+      </ul>
+
+      <h2>Навыки</h2>
+      <dl class="skills">
+        <dt>Языки</dt><dd>TypeScript, Python, JavaScript, SQL</dd>
+        <dt>Фреймворки</dt><dd>React, Next.js, Node.js, FastAPI, Tailwind CSS, Vite, REST, Webhooks, OAuth, JWT</dd>
+        <dt>Данные</dt><dd>PostgreSQL, MySQL, Redis, Qdrant, pgvector, ChromaDB, Supabase</dd>
+        <dt>AI</dt><dd>OpenAI, Claude, Gemini, LangChain, RAG, LLM, Prompt / Context Engineering, AI Agents</dd>
+        <dt>Инфра</dt><dd>Docker, Kubernetes, GitLab CI/CD, GitHub Actions, Linux, AWS, S3, MinIO</dd>
+        <dt>Архитектура</dt><dd>Микросервисы, Clean Architecture, Event-Driven, SOLID, TDD, Agile / Scrum</dd>
+        <dt>Инструменты</dt><dd>n8n, RabbitMQ, Apache Kafka, Git, Jira</dd>
+      </dl>
+
+      <h2>Опыт</h2>
+      <section class="job">
+        <div class="job-head">
+          <h3>Инженер по автоматизации / AI Full Stack Developer</h3>
+          <time>07.2025 — 01.2026</time>
+        </div>
+        <p class="company">Авито</p>
+        <p class="summary">Внутренние платформы автоматизации и AI-решения для корпоративных сервисов.</p>
+        <ul>
+          <li>Проектировал сервисы автоматизации, workflow и интеграции между внутренними системами и API.</li>
+          <li>Разрабатывал AI-оркестрацию процессов на n8n; работал с отказоустойчивостью, наблюдаемостью и обратной совместимостью.</li>
+          <li>Готовил RFC, API-контракты и архитектурные схемы; участвовал в обязательном code review и Agile-цикле команды.</li>
+        </ul>
+        <p class="tech">TypeScript · Node.js · PostgreSQL · n8n · Docker · GitLab · REST API</p>
+      </section>
+
+      <section class="job">
+        <div class="job-head">
+          <h3>Senior Full Stack AI Engineer</h3>
+          <time>06.2024 — 07.2025</time>
+        </div>
+        <p class="company">NK-JAX</p>
+        <p class="summary">AI-first продукты для e-commerce: генерация SEO и Rich Content, автоматизация отзывов на базе LLM и RAG.</p>
+        <ul>
+          <li>Вёл продукты с нуля: TDR, API-контракты, архитектура, разработка, деплой и сопровождение.</li>
+          <li>Собрал SEO Magic, конструктор Rich Content и RAG-платформу отзывов с RabbitMQ, Qdrant и интеграцией ERP.</li>
+          <li>Настраивал GitLab CI/CD, Docker и production на Linux; держал модульную архитектуру, тесты и code review.</li>
+        </ul>
+        <p class="tech">TypeScript · React · Node.js · PostgreSQL · Supabase · n8n · RabbitMQ · Qdrant · OpenAI · Claude · Docker · GitLab CI/CD</p>
+      </section>
+
+      <section class="job">
+        <div class="job-head">
+          <h3>Fullstack-разработчик</h3>
+          <time>09.2023 — 06.2024</time>
+        </div>
+        <p class="company">Axioma</p>
+        <p class="summary">AI-сервисы и автоматизация бизнес-процессов: RAG, Python backend, интеграции и клиентский веб.</p>
+        <ul>
+          <li>Строил Python API, RAG для документов и отзывов, подключал векторные БД и LLM.</li>
+          <li>Настраивал n8n, очереди и вебхуки; обеспечивал идемпотентную обработку задач и Docker-деплой.</li>
+          <li>Провёл миграцию данных, тестировал ETL и масштабировал серверную инфраструктуру.</li>
+        </ul>
+        <p class="tech">Python · n8n · Docker · PostgreSQL · RAG · LLM · REST API · Webhooks</p>
+      </section>
+
+      <h2>Образование</h2>
+      <div class="edu">
+        <p>
+          <strong>МГТУ им. Н. Э. Баумана</strong>
+          <span>2023 · Бакалавр, факультет биомедицинской техники · Автоматизация технологических процессов и производств</span>
+        </p>
+        <p>
+          <strong>Медицинский университет «Реавиз», Самара</strong>
+          <span>2017 · Стоматологический факультет</span>
+        </p>
+      </div>
+
+      <h2>Подход</h2>
+      <p class="qualities">
+        Системно проходит путь от требований и архитектуры до production-сопровождения.
+        Держит code review, документацию и инженерные стандарты даже при высокой скорости поставки.
+        Работает и самостоятельно — собирая AI-продукты с нуля — и в большой распределённой команде со зрелыми процессами.
+      </p>
+
+      <footer>Максим Кочергин · Senior Full Stack AI Engineer · Remote · 2026</footer>
+    </article>
+  </body>
+</html>
