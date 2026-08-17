@@ -234,8 +234,7 @@ ${project.mediaHint ? `<p>mediaHint: ${esc(project.mediaHint)}</p>` : ''}
 <p>stack: ${esc(job.stack.join(', '))}</p>
 </article>`).join('\n')
 
-  const body = `<p>${esc(doc.nda)}</p>
-<h1>${esc(doc.person.fullName)}</h1>
+  const body = `<h1>${esc(doc.person.fullName)}</h1>
 <p>${esc(doc.person.role)} · ${esc(doc.person.grade)} · опыт ${esc(doc.person.years)}</p>
 <dl>
 <dt>Name</dt><dd>${esc(doc.person.name)}</dd>
@@ -300,6 +299,7 @@ ${themeHead}
 <div class="md-shell">
 ${mdWindow(`<p>This page is the AI / parser / recruiter-bot version. JavaScript is not required to read the CV.</p>
 <p>Other copies: <a href="/llms.txt">/llms.txt</a>, <a href="/ai.json">/ai.json</a>. Human UI: <a href="/human.html">/human.html</a>.</p>
+<p>${esc(doc.nda)}</p>
 ${body}`)}
 </div>
 ${themeScript}
@@ -333,7 +333,8 @@ ${themeHead}
 <nav aria-label="Human version">
   <a class="md-human" id="human-version" data-audience="human" href="/human.html">Версия для людей / Human version</a>
 </nav>
-${mdWindow(body)}
+${mdWindow(`<p>Страница для чтения ИИ агентами и ботами. Вход для людей по кнопке выше</p>
+${body}`)}
 </div>
 ${themeScript}
 </body>
