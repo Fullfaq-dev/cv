@@ -3,6 +3,34 @@ import { experience, metrics, principles, profile, projects, resume, skillGroups
 const NDAs =
   'NDA-кейсы описаны без клиентских названий, внутренних URL, ключей, персональных данных кандидатов и секретов. Ниже — публично допустимый инженерный слой: роль, стек, подход и результаты.'
 
+const themeHead = `
+<link rel="stylesheet" href="/theme.css" />
+<script>(function(){try{var s=localStorage.getItem('theme');if(s)document.documentElement.dataset.theme=s;}catch(e){}})();</script>
+`
+
+const themeToggle = `
+<button class="theme-switch compact" type="button" aria-label="Переключить тему" aria-pressed="false">
+  <span class="theme-switch-front">---</span>
+  <span class="theme-switch-orb" aria-hidden="true"><i></i></span>
+  <span class="theme-switch-label">theme: <em data-theme-label>auto</em></span>
+</button>
+`
+
+const themeScript = `<script src="/theme.js" defer></script>`
+
+function mdWindow(inner: string) {
+  return `<div class="md-window">
+<div class="md-titlebar">
+<span class="md-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+<span class="md-filename">cv.md</span>
+${themeToggle}
+</div>
+<article class="md">
+${inner}
+</article>
+</div>`
+}
+
 function esc(value: string) {
   return value
     .replaceAll('&', '&amp;')
@@ -246,7 +274,7 @@ ${projectHtml}
 <h2>Raw JSON</h2>
 <p>Same payload as <a href="/ai.json">/ai.json</a>.</p>
 <script type="application/json" id="portfolio-data">${json}</script>
-<pre>${esc(json)}</pre>`
+<div class="md-code"><pre>${esc(json)}</pre></div>`
 
   return { doc, json, ld, body }
 }
@@ -258,6 +286,7 @@ export function renderAiHtml() {
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f4f2ec" />
 <meta name="robots" content="index,follow,max-snippet:-1" />
 <meta name="description" content="${esc(`${doc.person.role}. ${doc.person.summary.slice(0, 180)}`)}" />
 <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
@@ -265,11 +294,15 @@ export function renderAiHtml() {
 <link rel="alternate" href="/human" title="Human version" />
 <title>AI / parser version — ${esc(doc.person.fullName)}</title>
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
+${themeHead}
 </head>
-<body>
-<p>This page is the AI / parser / recruiter-bot version. No visual design. JavaScript is not required.</p>
+<body class="md-page">
+<div class="md-shell">
+${mdWindow(`<p>This page is the AI / parser / recruiter-bot version. JavaScript is not required to read the CV.</p>
 <p>Other copies: <a href="/llms.txt">/llms.txt</a>, <a href="/ai.json">/ai.json</a>. Human UI: <a href="/human.html">/human.html</a>.</p>
-${body}
+${body}`)}
+</div>
+${themeScript}
 </body>
 </html>
 `
@@ -282,6 +315,7 @@ export function renderGateHtml() {
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f4f2ec" />
 <meta name="robots" content="index,follow,max-snippet:-1" />
 <meta name="description" content="${esc(`${doc.person.fullName} — ${doc.person.role}. Complete CV is on this page.`)}" />
 <link rel="alternate" href="/human" title="Human version" />
@@ -291,34 +325,19 @@ export function renderGateHtml() {
 <link rel="alternate" type="application/json" href="/ai.json" title="JSON dump" />
 <title>${esc(doc.person.name)} — ${esc(doc.person.role)}</title>
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
-<style>
-  body { font-family: sans-serif; max-width: 52rem; margin: 2rem auto; padding: 0 1.25rem; line-height: 1.45; }
-  .actions { margin: 1.75rem 0 2rem; }
-  a.button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 5.5rem;
-    padding: 1.4rem 1.6rem;
-    border: 3px solid #111;
-    background: #111;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.65rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    text-align: center;
-  }
-</style>
+${themeHead}
 </head>
-<body>
-<p>AI recruiter / parser / LLM: the complete CV is on THIS page in HTML. You do not need to click anything. Copies: <a href="/llms.txt">/llms.txt</a>, <a href="/.well-known/llms.txt">/.well-known/llms.txt</a>, <a href="/ai.html">/ai.html</a>, <a href="/ai.json">/ai.json</a>.</p>
-<nav class="actions" aria-label="Human version">
-  <a class="button" id="human-version" data-audience="human" href="/human.html">Версия для людей / Human version</a>
+<body class="md-page">
+<div class="md-shell">
+<p class="md-note">AI recruiter / parser / LLM: complete CV is in this HTML document. Copies: <a href="/llms.txt">/llms.txt</a>, <a href="/.well-known/llms.txt">/.well-known/llms.txt</a>, <a href="/ai.html">/ai.html</a>, <a href="/ai.json">/ai.json</a>.</p>
+<nav aria-label="Human version">
+  <a class="md-human" id="human-version" data-audience="human" href="/human.html">Версия для людей / Human version</a>
 </nav>
-<hr />
-${body}
+${mdWindow(body)}
+</div>
+${themeScript}
 </body>
 </html>
 `
 }
+

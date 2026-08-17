@@ -240,7 +240,14 @@ export default function App() {
         <nav aria-label="Навигация">
           {navItems.map(([href, label]) => <a href={href} key={href}>{label}</a>)}
         </nav>
-        <p className="sidebar-status"><i /> available for work</p>
+        <div className="sidebar-foot">
+          <button className="theme-switch" type="button" aria-label="Переключить тему" aria-pressed="false">
+            <span className="theme-switch-front">---</span>
+            <span className="theme-switch-orb" aria-hidden="true"><i /></span>
+            <span className="theme-switch-label">theme: <em data-theme-label>auto</em></span>
+          </button>
+          <p className="sidebar-status"><i /> available for work</p>
+        </div>
       </aside>
 
       <main>
