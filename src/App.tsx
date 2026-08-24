@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type PointerEvent } from 'react'
-import { experience, metrics, principles, profile, projects, resume, skillGroups, type Project } from './data'
+import { experience, metrics, platinum, principles, profile, projects, resume, skillGroups, type Project } from './data'
 import './styles.css'
 
 const navItems = [
@@ -233,6 +233,29 @@ export default function App() {
   )
   const activeScenario = metrics.scenarios.find((scenario) => scenario.id === metricId) ?? metrics.scenarios[0]
 
+  useEffect(() => {
+    const scrollToHash = () => {
+      const id = decodeURIComponent(window.location.hash.replace(/^#/, ''))
+      if (!id) return
+      if (id === 'top') {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+        return
+      }
+      const node = document.getElementById(id)
+      node?.scrollIntoView({ behavior: 'auto', block: 'start' })
+    }
+
+    history.scrollRestoration = 'manual'
+    const frame = requestAnimationFrame(scrollToHash)
+    const timer = window.setTimeout(scrollToHash, 80)
+    window.addEventListener('hashchange', scrollToHash)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.clearTimeout(timer)
+      window.removeEventListener('hashchange', scrollToHash)
+    }
+  }, [])
+
   return (
     <div className="site-shell" id="top">
       <aside className="sidebar">
@@ -349,6 +372,27 @@ export default function App() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section id="elden-ring" className="section platinum-section" aria-labelledby="platinum-title">
+          <p className="section-index">[ off the clock ]</p>
+          <article className="platinum-card">
+            <img src={platinum.image} alt={platinum.imageAlt} width="390" height="844" />
+            <div>
+              <p className="eyebrow">{platinum.platform} · {platinum.kind}</p>
+              <h2 id="platinum-title">Elden <em>Ring</em></h2>
+              <p className="platinum-complete">{platinum.obtained} / {platinum.available} призов · {platinum.date}</p>
+              <div className="platinum-copy">
+                {platinum.text.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+              <div className="platinum-stats" aria-label="Состав трофеев">
+                <span>Platinum {platinum.platinum}</span>
+                <span>Gold {platinum.gold}</span>
+                <span>Silver {platinum.silver}</span>
+                <span>Bronze {platinum.bronze}</span>
+              </div>
+            </div>
+          </article>
         </section>
 
         <section id="resume" className="section resume-section">

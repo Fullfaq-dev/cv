@@ -94,15 +94,27 @@ export const metrics = {
 
 export const experience = [
   {
+    period: '01.2026 — 08.2026',
+    company: 'IT-Implant',
+    role: 'Senior Full Stack AI Engineer',
+    summary:
+      'AI-продукты для автоматизации рекрутинга: поиск и оценка кандидатов, стандартизация CV, интеграции с Bitrix24 и HH.',
+    points: [
+      'AI Matcher: двухэтапный matching вакансий и кандидатов, вебхуки Bitrix24, кэш и уведомления менеджерам.',
+      'CV-ассистент в Telegram: PDF/DOCX/hh.ru → Apache Tika → LLM → стандартизированное резюме.',
+      'bxSourcer: автономный pipeline заявка → HH → AI-оценка → rerank → передача в Bitrix24, выведен в production.',
+    ],
+  },
+  {
     period: '07.2025 — 01.2026',
     company: 'Авито',
     role: 'Инженер по автоматизации бизнес-процессов',
     summary:
       'Внутренние платформы автоматизации и AI-решения в кросс-функциональной продуктовой команде.',
     points: [
-      'Проектирование workflow, интеграций, API-контрактов и технической документации.',
+      'Проектирование workflow, интеграций, API-контрактов, RFC и архитектурных схем.',
       'Оркестрация процессов на n8n: события, ошибки, повторные попытки, уведомления и мониторинг.',
-      'Работа с production-системами в инженерных процессах BigTech: Agile, CI/CD и обязательный code review.',
+      'Production в инженерных процессах BigTech: Agile, CI/CD, обязательный code review и наблюдаемость.',
     ],
   },
   {
@@ -113,8 +125,8 @@ export const experience = [
       'AI-first продукты для e-commerce: генерация контента, RAG-системы и автоматизация обработки отзывов.',
     points: [
       'Полный цикл: TDR, декомпозиция, архитектура, разработка, деплой и сопровождение.',
-      'React/TypeScript/Node.js-продукты, AI workflow, очереди и интеграции с внешними сервисами.',
-      'CI/CD, Docker, Linux/VPS и модульная архитектура с фокусом на поддерживаемость.',
+      'SEO Magic, конструктор Rich Content и RAG-платформа отзывов: очереди, Qdrant, интеграция ERP.',
+      'GitLab CI/CD, Docker, Linux/VPS и модульная архитектура с фокусом на поддерживаемость.',
     ],
   },
   {
@@ -125,7 +137,7 @@ export const experience = [
     points: [
       'Python API и RAG-архитектуры для документов, отзывов и пользовательских данных.',
       'Очереди, вебхуки, идемпотентная обработка задач и Docker-деплой.',
-      'Поддержка производительности, ETL-процессов и масштабирования серверной инфраструктуры.',
+      'Миграция данных, ETL и масштабирование серверной инфраструктуры.',
     ],
   },
 ]
@@ -402,19 +414,21 @@ export const resume = {
   downloadName: 'Kochergin-Maxim-AI-Engineer.pdf',
   fullName: 'Кочергин Максим Андреевич',
   grade: 'Senior',
-  years: '2+ года',
+  years: '3+ года',
   city: 'Одинцово (Московская область)',
   citizenship: 'Россия',
   languages: [{ name: 'Русский', level: 'родной' }, { name: 'English', level: 'B2' }],
   availability: 'ASAP',
   summary:
-    'Full Stack AI Engineer с опытом создания AI-продуктов полного цикла: от архитектуры и технического дизайна до production-деплоя и сопровождения. В NK-JAX спроектировал и вывел в production платформу SEO Magic, AI-конструктор Rich Content и корпоративную RAG-систему ответов на отзывы маркетплейсов. В Авито разрабатывал внутренние платформы автоматизации и AI-решения в кросс-функциональной команде со зрелыми инженерными процессами. Сочетает LLM, RAG и workflow-автоматизацию с полным стеком TypeScript / React / Node.js / Python и культурой production-ready разработки.',
+    'Senior Full Stack AI Engineer с опытом создания AI-продуктов полного цикла: от проектирования архитектуры и TDR до вывода в production. В NK-JAX самостоятельно спроектировал и реализовал RAG-платформу автоматизации ответов на отзывы маркетплейсов (RabbitMQ, Qdrant, LLM) и AI-конструктор Rich Content; в Авито участвовал в разработке внутренних сервисов автоматизации и AI-оркестрации в BigTech-команде со зрелыми инженерными процессами. В IT-Implant реализовал автономный AI-сорсер кандидатов и интеллектуальный CV-ассистент с двухэтапным LLM-матчингом. Специализируется на LLM-интеграциях, RAG, workflow-автоматизации и event-driven архитектуре, закрывая полный Full Stack — от React/TypeScript-фронтенда до Python/Node.js-бэкенда и DevOps-инфраструктуры.',
   aiFocus: [
-    'RAG-архитектуры для ответов на отзывы маркетплейсов: Qdrant, LLM, семантический поиск по базе знаний.',
-    'AI workflow на n8n с OpenAI, Claude, Gemini, OpenRouter, Llama и Mistral.',
-    'Многоэтапный пайплайн генерации SEO-контента и AI-конструктор Rich Content с визуальным редактором и live preview.',
-    'Асинхронные пайплайны и event-driven архитектура для AI-систем; векторные БД: Qdrant, pgvector, ChromaDB.',
+    'RAG-архитектуры для ответов на отзывы маркетплейсов: Qdrant, pgvector, LLM (OpenAI, Claude, Gemini, Llama, Mistral) и семантический поиск по базе знаний.',
+    'AI workflow на n8n: многоэтапные пайплайны SEO-контента, Rich Content для маркетплейсов и автоматизация бизнес-процессов.',
+    'AI Matcher — сопоставление вакансий и кандидатов: векторный pre-filter (pgvector) и глубокий LLM-анализ.',
+    'CV-ассистент в Telegram: извлечение данных из PDF/DOCX/hh.ru, структурированный разбор LLM и генерация стандартизированных CV.',
+    'bxSourcer — автономный AI-сорсер: pipeline Bitrix24 → HH → AI-оценка → rerank → передача в Bitrix24.',
     'Claude Code и AI-агенты как инженерный инструмент: разработка, рефакторинг, тесты и документация.',
+    'Интеграция LLM (OpenAI, Claude, Gemini, OpenRouter, Llama, Mistral) в рабочие процессы продуктовых компаний.',
   ],
   education: [
     {
@@ -431,37 +445,53 @@ export const resume = {
     },
   ],
   approach:
-    'Системно проходит путь от требований и архитектуры до production-сопровождения. Держит code review, документацию и инженерные стандарты даже при высокой скорости поставки. Работает и самостоятельно — собирая AI-продукты с нуля — и в большой распределённой команде со зрелыми процессами.',
+    'Самостоятельно ведёт задачи от анализа требований и TDR до production. Работает и в стартап-режиме с быстрым MVP, и в BigTech со строгим code review. Сочетает скорость поставки с инженерной дисциплиной: контракты, модульность и масштабируемость остаются приоритетом при сжатых сроках.',
   detailedJobs: [
+    {
+      company: 'IT-Implant',
+      period: '01.2026 — 08.2026',
+      role: 'Senior Full Stack AI Engineer',
+      summary: 'AI-продукты и внутренние инструменты для автоматизации рекрутинга: поиск и оценка кандидатов, генерация CV, интеграция с Bitrix24 и HH.',
+      points: [
+        'Спроектировал AI Matcher: вебхуки Bitrix24, двухэтапный matching (векторный pre-filter + LLM), кэширование и уведомления менеджеров.',
+        'Разработал Telegram CV-ассистент: PDF/DOCX или ссылка hh.ru, Apache Tika, разбор LLM и стандартизированные CV.',
+        'Реализовал bxSourcer: pipeline Bitrix24 → HH → AI-оценка → rerank → Workplace → передача в CRM; вывел сервис в production.',
+        'Добавил дедупликацию, кэш, MinIO, аудит запросов, whitelist, квоты и мониторинг.',
+        'Автоматизировал цикл сорсинга от заявки до передачи в CRM и сократил время обработки CV за счёт LLM-стандартизации.',
+      ],
+      stack: ['Python', 'FastAPI', 'PostgreSQL', 'pgvector', 'Celery', 'Redis', 'Bitrix24', 'LLM', 'GPT-4.1 mini', 'Apache Tika', 'MinIO', 'Telegram Bot', 'hh.ru API', 'Docker', 'REST API'],
+    },
     {
       company: 'Авито',
       period: '07.2025 — 01.2026',
       role: 'Инженер по автоматизации бизнес-процессов / AI Full Stack Developer',
-      summary: 'Внутренние платформы автоматизации и AI-решения для корпоративных сервисов.',
+      summary: 'Внутренние сервисы и платформы автоматизации бизнес-процессов в крупной продуктовой интернет-компании.',
       points: [
-        'Проектировал сервисы автоматизации, workflow и интеграции между внутренними системами и API.',
-        'Разрабатывал AI-оркестрацию процессов на n8n; работал с отказоустойчивостью, наблюдаемостью и обратной совместимостью.',
-        'Готовил RFC, API-контракты и архитектурные схемы; участвовал в обязательном code review и Agile-цикле команды.',
+        'Проектировал сервисы автоматизации: интеграции, оркестрация workflow, обработка событий и внешние API.',
+        'Разрабатывал AI-автоматизацию на n8n; работал с отказоустойчивостью, логированием, наблюдаемостью и обратной совместимостью.',
+        'Готовил RFC, API-контракты и архитектурные схемы; участвовал в обязательном code review и Agile-цикле.',
+        'Взаимодействовал с backend, frontend, QA, DevOps, аналитиками и продуктом в спринтах.',
       ],
-      stack: ['TypeScript', 'Node.js', 'PostgreSQL', 'n8n', 'Docker', 'GitLab', 'REST API'],
+      stack: ['TypeScript', 'Node.js', 'PostgreSQL', 'n8n', 'Docker', 'GitLab', 'REST API', 'AI Automation'],
     },
     {
       company: 'NK-JAX',
       period: '06.2024 — 07.2025',
-      role: 'Senior Full Stack AI Engineer',
-      summary: 'AI-first продукты для e-commerce: генерация SEO и Rich Content, автоматизация отзывов на базе LLM и RAG.',
+      role: 'Senior Full Stack AI Engineer / инженер по сопровождению ИИ-решений',
+      summary: 'AI-first продукты для e-commerce: платформа SEO Magic, Rich Content и автоматизация отзывов маркетплейсов на базе LLM и RAG.',
       points: [
-        'Вёл продукты с нуля: TDR, API-контракты, архитектура, разработка, деплой и сопровождение.',
-        'Собрал SEO Magic, конструктор Rich Content и RAG-платформу отзывов с RabbitMQ, Qdrant и интеграцией ERP.',
-        'Настраивал GitLab CI/CD, Docker и production на Linux; держал модульную архитектуру, тесты и code review.',
+        'Спроектировал архитектуру нескольких AI-продуктов с нуля: от TDR и требований до production.',
+        'Собрал SEO Magic, конструктор Rich Content с live preview и RAG-платформу отзывов (RabbitMQ, Qdrant, ERP).',
+        'Реализовал асинхронные пайплайны, очереди и семантический поиск по историческим ответам.',
+        'Настраивал GitLab CI/CD, Docker и production на Linux; использовал Claude Code и агентов для тестов и документации.',
       ],
-      stack: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Supabase', 'n8n', 'RabbitMQ', 'Qdrant', 'OpenAI', 'Claude', 'Docker', 'GitLab CI/CD'],
+      stack: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Supabase', 'n8n', 'RabbitMQ', 'Qdrant', 'OpenAI', 'Claude', 'OpenRouter', 'RAG', 'Docker', 'GitLab CI/CD', 'Tailwind CSS'],
     },
     {
       company: 'Axioma',
       period: '09.2023 — 06.2024',
       role: 'Fullstack-разработчик',
-      summary: 'AI-сервисы и автоматизация бизнес-процессов: RAG, Python backend, интеграции и клиентский веб.',
+      summary: 'AI-сервисы и RAG-архитектуры под бизнес-процессы в системном интеграторе: Python backend, интеграции и клиентский веб.',
       points: [
         'Строил Python API, RAG для документов и отзывов, подключал векторные БД и LLM.',
         'Настраивал n8n, очереди и вебхуки; обеспечивал идемпотентную обработку задач и Docker-деплой.',
@@ -472,11 +502,31 @@ export const resume = {
   ],
 }
 
+export const platinum = {
+  game: 'Elden Ring',
+  platform: 'PS5',
+  kind: 'Platinum trophy',
+  obtained: 42,
+  available: 42,
+  platinum: 1,
+  gold: 3,
+  silver: 14,
+  bronze: 24,
+  date: '19.07.2026',
+  image: '/elden-ring/platinum.jpg',
+  imageAlt: 'Скрин PS5: платина Elden Ring, 42 из 42 призов',
+  text: [
+    'У меня не получается доводить дело НЕ до конца.',
+    'В Elden Ring это вылилось в 42 из 42 достижение и платину. Сотни часов исследования, десятки необязательных боссов и огромное количество мелочей, которые легко пропустить.',
+    'В работе все точно так же: если система уже сложная — хочется не просто заставить её работать, а разобраться, как она устроена целиком.',
+  ],
+}
+
 export const skillGroups = [
-  ['Languages', 'TypeScript · Python · JavaScript · SQL'],
+  ['Languages', 'Python · TypeScript · JavaScript · SQL'],
   ['Frontend', 'React · Next.js · Vite · Tailwind CSS'],
   ['Backend', 'Node.js · FastAPI · PostgreSQL · Supabase · Redis'],
-  ['AI', 'OpenAI · Claude · Gemini · RAG · Agents · Prompt / Context Engineering · On-device ML'],
-  ['Automation', 'n8n · RabbitMQ · Webhooks · Event-driven architecture · Bitrix24'],
-  ['Data & DevOps', 'Qdrant · pgvector · Docker · Kubernetes · GitLab CI/CD · Linux'],
+  ['AI', 'OpenAI · Claude · Gemini · Llama · Mistral · OpenRouter · RAG · Agents · Prompt / Context Engineering · PyTorch · NLP'],
+  ['Automation', 'n8n · RabbitMQ · Celery · Webhooks · Event-driven architecture · Bitrix24'],
+  ['Data & DevOps', 'Qdrant · pgvector · Docker · Kubernetes · GitLab CI/CD · Linux · MinIO · AWS'],
 ]
