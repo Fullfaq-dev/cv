@@ -1,4 +1,4 @@
-import { experience, metrics, principles, profile, projects, resume, skillGroups } from './data'
+import { experience, metrics, platinum, principles, profile, projects, resume, skillGroups } from './data'
 
 const NDAs =
   'NDA-кейсы описаны без клиентских названий, внутренних URL, ключей, персональных данных кандидатов и секретов. Ниже — публично допустимый инженерный слой: роль, стек, подход и результаты.'
@@ -79,6 +79,7 @@ export function buildAiDocument() {
     experience,
     detailedJobs: resume.detailedJobs,
     metrics,
+    platinum,
     projects: projects.map((project) => ({
       ...project,
       gallery: project.gallery?.map((image) => ({
@@ -181,7 +182,13 @@ export function renderLlmsTxt() {
     lines.push('')
   }
 
-  lines.push('## Files')
+  lines.push('', '## Aside')
+  lines.push(`- ${doc.platinum.platform} ${doc.platinum.kind}: ${doc.platinum.game}`)
+  lines.push(`- ${doc.platinum.obtained}/${doc.platinum.available} trophies · ${doc.platinum.date}`)
+  lines.push(`- ${doc.platinum.text.join(' ')}`)
+  lines.push(`- screenshot: ${doc.platinum.image}`)
+
+  lines.push('', '## Files')
   for (const [key, value] of Object.entries(doc.files)) {
     lines.push(`- ${key}: ${value}`)
   }
@@ -268,6 +275,11 @@ ${jobsHtml}
 <ul>${doc.metrics.scenarios.map((scenario) => `<li>${esc(scenario.label)}: ${esc(scenario.metric)}. ${scenario.before} → ${scenario.after} ${esc(scenario.unit)} (${esc(scenario.delta)}). ${esc(scenario.note)}</li>`).join('')}</ul>
 <h2>Projects</h2>
 ${projectHtml}
+<h2>Aside</h2>
+<p>${esc(doc.platinum.platform)} ${esc(doc.platinum.kind)}: ${esc(doc.platinum.game)}</p>
+<p>${doc.platinum.obtained}/${doc.platinum.available} trophies · ${esc(doc.platinum.date)}</p>
+<p>${esc(doc.platinum.text.join(' '))}</p>
+<p>screenshot: <a href="${esc(doc.platinum.image)}">${esc(doc.platinum.image)}</a></p>
 <h2>Notes</h2>
 <ul>${doc.notes.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
 <h2>Raw JSON</h2>
