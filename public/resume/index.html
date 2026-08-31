@@ -50,8 +50,11 @@
       .kicker { margin: 0 0 8px; color: var(--accent); font: 11px/1.4 "DM Mono", monospace; text-transform: uppercase; letter-spacing: .04em; }
       h1 { margin: 0 0 6px; font-size: 36px; line-height: .92; letter-spacing: -.05em; }
       h1 em { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 500; }
-      .role { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
-      .meta { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+      .role { margin: 0 0 10px; color: var(--muted); font-size: 15px; }
+      .contacts { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0 0 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line); font-size: 12.5px; }
+      .contacts a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+      .meta { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+      .skill-line { margin: 0 0 4px; color: #3f413d; font-size: 13px; line-height: 1.5; }
       .meta span {
         border: 1px solid var(--line);
         border-radius: 99px;
@@ -59,7 +62,8 @@
         color: #555951;
         font: 10px/1.4 "DM Mono", monospace;
       }
-      .lead { max-width: 800px; margin: 0 0 18px; color: #3f413d; font-size: 13.5px; line-height: 1.55; }
+      .lead { max-width: 800px; margin: 0 0 8px; color: #3f413d; font-size: 13.5px; line-height: 1.55; }
+      .langs { margin: 0 0 4px; color: #3f413d; font-size: 13px; }
       h2 {
         margin: 18px 0 8px;
         color: var(--accent);
@@ -136,109 +140,90 @@
     <article class="sheet">
       <p class="kicker">Resume / 2026</p>
       <h1>Максим <em>Кочергин</em></h1>
-      <p class="role">Senior Full Stack AI Engineer</p>
+      <p class="role">Senior Full Stack AI Engineer (RAG, LLM, Automation)</p>
+      <div class="contacts">
+        <span>Москва / Одинцово · remote</span>
+        <a href="tel:+79309917433">+7 (930) 991-74-33</a>
+        <a href="mailto:cryptooth2021@gmail.com">cryptooth2021@gmail.com</a>
+        <a href="https://t.me/Drakedog_ee">Telegram @Drakedog_ee</a>
+        <a href="https://maxcv.fun/">Портфолио maxcv.fun</a>
+      </div>
       <div class="meta">
         <span>Senior</span>
-        <span>Опыт 3+ года</span>
-        <span>Одинцово · Remote</span>
-        <span>Россия</span>
-        <span>English — B2</span>
+        <span>Опыт 3 года</span>
+        <span>English — C1</span>
         <span>Готовность: ASAP</span>
-        <span>t.me/Drakedog_ee</span>
       </div>
 
       <p class="lead">
-        Senior Full Stack AI Engineer с опытом создания AI-продуктов полного цикла: от проектирования архитектуры и TDR до вывода в production.
-        В NK-JAX самостоятельно спроектировал и реализовал RAG-платформу автоматизации ответов на отзывы маркетплейсов (RabbitMQ, Qdrant, LLM) и AI-конструктор Rich Content;
-        в Авито участвовал в разработке внутренних сервисов автоматизации и AI-оркестрации в BigTech-команде со зрелыми инженерными процессами.
-        В IT-Implant реализовал автономный AI-сорсер кандидатов и интеллектуальный CV-ассистент с двухэтапным LLM-матчингом.
-        Специализируется на LLM-интеграциях, RAG, workflow-автоматизации и event-driven архитектуре, закрывая полный Full Stack — от React/TypeScript-фронтенда до Python/Node.js-бэкенда и DevOps-инфраструктуры.
+        Senior Full Stack AI Engineer с 3 годами опыта создания AI-продуктов полного цикла.
+        С нуля спроектировал и вывел в production RAG-платформу ответов на отзывы и автономный AI-сорсер кандидатов: shortlist с часов ручного разбора до 10–15 минут, подготовка CV с ~20 минут до 1–2.
+        Специализируюсь на LLM-интеграциях, event-driven архитектуре и MVP от React-фронтенда до Python/Node.js-бэкенда.
       </p>
 
-      <h2>ИИ и автоматизация</h2>
-      <ul class="ai-list">
-        <li>RAG-архитектуры для ответов на отзывы маркетплейсов: Qdrant, pgvector, LLM (OpenAI, Claude, Gemini, Llama, Mistral) и семантический поиск по базе знаний.</li>
-        <li>AI workflow на n8n: многоэтапные пайплайны SEO-контента, Rich Content для маркетплейсов и автоматизация бизнес-процессов.</li>
-        <li>AI Matcher — сопоставление вакансий и кандидатов: векторный pre-filter (pgvector) и глубокий LLM-анализ.</li>
-        <li>CV-ассистент в Telegram: извлечение данных из PDF/DOCX/hh.ru, структурированный разбор LLM и генерация стандартизированных CV.</li>
-        <li>bxSourcer — автономный AI-сорсер: pipeline Bitrix24 → HH → AI-оценка → rerank → передача в Bitrix24.</li>
-        <li>Claude Code и AI-агенты как инженерный инструмент: разработка, рефакторинг, тесты и документация.</li>
-        <li>Интеграция LLM (OpenAI, Claude, Gemini, OpenRouter, Llama, Mistral) в рабочие процессы продуктовых компаний.</li>
-      </ul>
-
       <h2>Навыки</h2>
-      <dl class="skills">
-        <dt>Языки</dt><dd>Python, TypeScript, JavaScript, SQL</dd>
-        <dt>Фреймворки</dt><dd>React, Next.js, Node.js, FastAPI, Vite, Tailwind CSS, REST API, Webhooks, OAuth, JWT, n8n</dd>
-        <dt>Данные</dt><dd>PostgreSQL, MySQL, Redis, Qdrant, pgvector, ChromaDB, Supabase</dd>
-        <dt>AI</dt><dd>OpenAI, Claude, Gemini, Llama, Mistral, OpenRouter, RAG, LLM, AI Agents, Prompt / Context Engineering, PyTorch, NLP, ML</dd>
-        <dt>Инфра</dt><dd>Docker, Kubernetes, GitLab CI/CD, Linux, AWS, S3, MinIO</dd>
-        <dt>Архитектура</dt><dd>Микросервисы, Event-Driven, Clean Architecture, SOLID, Agile / Scrum, REST API Design</dd>
-        <dt>Инструменты</dt><dd>Git, GitHub, GitLab, RabbitMQ, Apache Kafka, Celery, Apache Tika, Bitrix24</dd>
-        <dt>Другое</dt><dd>SaaS, blockchain</dd>
-      </dl>
+      <p class="skill-line">Python, TypeScript, Node.js, React, Next.js, FastAPI, PostgreSQL, Redis, Qdrant, RabbitMQ, Docker, Kubernetes, AWS, GitLab CI/CD, n8n, RAG, LLM (OpenAI, Claude, Llama).</p>
 
       <h2>Опыт</h2>
       <section class="job">
         <div class="job-head">
           <h3>Senior Full Stack AI Engineer</h3>
-          <time>01.2026 — 08.2026</time>
+          <time>01.2026 — 08.2026 · 8 мес</time>
         </div>
         <p class="company">IT-Implant</p>
-        <p class="summary">AI-продукты и внутренние инструменты для автоматизации рекрутинга: поиск и оценка кандидатов, генерация CV, интеграция с Bitrix24 и HH.</p>
+        <p class="summary">HR-tech стартап: AI-решения для автоматизации рекрутинга.</p>
         <ul>
-          <li>Спроектировал AI Matcher: вебхуки Bitrix24, двухэтапный matching (векторный pre-filter + LLM), кэширование и уведомления менеджеров.</li>
-          <li>Разработал Telegram CV-ассистент: PDF/DOCX или ссылка hh.ru, Apache Tika, разбор LLM и стандартизированные CV.</li>
-          <li>Реализовал bxSourcer: pipeline Bitrix24 → HH → AI-оценка → rerank → Workplace → передача в CRM; вывел сервис в production.</li>
-          <li>Добавил дедупликацию, кэш, MinIO, аудит запросов, whitelist, квоты и мониторинг.</li>
-          <li>Автоматизировал цикл сорсинга от заявки до передачи в CRM и сократил время обработки CV за счёт LLM-стандартизации.</li>
+          <li>Спроектировал AI Matcher с двухэтапным ранжированием (векторный pre-filter + LLM): shortlist с часов ручного разбора до ~10–15 минут, до 80% меньше CV на детальный разбор.</li>
+          <li>Разработал Telegram CV-ассистент для парсинга PDF/DOCX и hh.ru — подготовка стандартизированного CV: ~20 минут → 1–2 минуты, без ручного переноса в CRM.</li>
+          <li>Вывел в production автономный AI-сорсер bxSourcer: Bitrix24 → HH → AI-оценка → rerank → загрузка в CRM, первичный shortlist за 15–30 минут.</li>
+          <li>Закрыл эксплуатацию: Redis-кэш, MinIO, дедупликация, аудит запросов, whitelist и квоты.</li>
         </ul>
-        <p class="tech">Python · FastAPI · PostgreSQL · pgvector · Celery · Redis · Bitrix24 · LLM · Apache Tika · MinIO · Telegram Bot · hh.ru API · Docker</p>
+        <p class="tech">Python · FastAPI · PostgreSQL · pgvector · Celery · Redis · Bitrix24 · LLM · Apache Tika · MinIO · Docker</p>
       </section>
 
       <section class="job">
         <div class="job-head">
           <h3>Инженер по автоматизации / AI Full Stack Developer</h3>
-          <time>07.2025 — 01.2026</time>
+          <time>07.2025 — 01.2026 · 7 мес</time>
         </div>
         <p class="company">Авито</p>
-        <p class="summary">Внутренние сервисы и платформы автоматизации бизнес-процессов в крупной продуктовой интернет-компании.</p>
+        <p class="summary">Крупнейшая российская онлайн-платформа объявлений. Внутренние сервисы автоматизации.</p>
         <ul>
-          <li>Проектировал сервисы автоматизации: интеграции, оркестрация workflow, обработка событий и внешние API.</li>
-          <li>Разрабатывал AI-автоматизацию на n8n; работал с отказоустойчивостью, логированием, наблюдаемостью и обратной совместимостью.</li>
-          <li>Готовил RFC, API-контракты и архитектурные схемы; участвовал в обязательном code review и Agile-цикле.</li>
-          <li>Взаимодействовал с backend, frontend, QA, DevOps, аналитиками и продуктом в спринтах.</li>
+          <li>Разработал отказоустойчивые workflow на n8n для внутренних процессов: обработка событий, ошибки, retries и наблюдаемость.</li>
+          <li>Спроектировал и задокументировал архитектуру интеграций (RFC, API-контракты) — чтобы сервис собирали по контракту, а не по устным договорённостям.</li>
+          <li>Усилил надёжность платформы автоматизации: логирование, мониторинг, обратная совместимость.</li>
+          <li>Работал в кросс-функциональной Agile-команде (backend, frontend, QA, DevOps) с обязательным code review и CI/CD.</li>
         </ul>
-        <p class="tech">TypeScript · Node.js · PostgreSQL · n8n · Docker · GitLab · REST API · AI Automation</p>
+        <p class="tech">TypeScript · Node.js · PostgreSQL · n8n · Docker · GitLab · REST API</p>
       </section>
 
       <section class="job">
         <div class="job-head">
           <h3>Senior Full Stack AI Engineer</h3>
-          <time>06.2024 — 07.2025</time>
+          <time>06.2024 — 07.2025 · 1 год 2 мес</time>
         </div>
         <p class="company">NK-JAX</p>
-        <p class="summary">AI-first продукты для e-commerce: платформа SEO Magic, Rich Content и автоматизация отзывов маркетплейсов на базе LLM и RAG.</p>
+        <p class="summary">AI-first стартап: продукты для e-commerce.</p>
         <ul>
-          <li>Спроектировал архитектуру нескольких AI-продуктов с нуля: от TDR и требований до production.</li>
-          <li>Собрал SEO Magic, конструктор Rich Content с live preview и RAG-платформу отзывов (RabbitMQ, Qdrant, ERP).</li>
-          <li>Реализовал асинхронные пайплайны, очереди и семантический поиск по историческим ответам.</li>
-          <li>Настраивал GitLab CI/CD, Docker и production на Linux; использовал Claude Code и агентов для тестов и документации.</li>
+          <li>С нуля спроектировал и вывел в production 3 продукта: SEO Magic, AI Rich Content и RAG-платформу ответов на отзывы маркетплейсов.</li>
+          <li>SEO-материал: ~3–5 часов ручной подготовки → 20–30 минут черновика; RICH-полотно — один AI-пайплайн вместо нескольких ручных макетов.</li>
+          <li>Собрал RAG на RabbitMQ и Qdrant с семантическим поиском по базе знаний и интеграцией ERP.</li>
+          <li>Настроил GitLab CI/CD, упаковал сервисы в Docker и сопровождал Linux-production сам.</li>
         </ul>
-        <p class="tech">TypeScript · React · Node.js · PostgreSQL · Supabase · n8n · RabbitMQ · Qdrant · OpenAI · Claude · OpenRouter · RAG · Docker · GitLab CI/CD</p>
+        <p class="tech">TypeScript · React · Node.js · PostgreSQL · n8n · RabbitMQ · Qdrant · OpenAI · Claude · Docker · GitLab CI/CD</p>
       </section>
 
       <section class="job">
         <div class="job-head">
           <h3>Fullstack-разработчик</h3>
-          <time>09.2023 — 06.2024</time>
+          <time>09.2023 — 06.2024 · 10 мес</time>
         </div>
         <p class="company">Axioma</p>
-        <p class="summary">AI-сервисы и RAG-архитектуры под бизнес-процессы в системном интеграторе: Python backend, интеграции и клиентский веб.</p>
+        <p class="summary">Системный интегратор: AI-решения для бизнес-процессов клиентов.</p>
         <ul>
-          <li>Строил Python API, RAG для документов и отзывов, подключал векторные БД и LLM.</li>
-          <li>Настраивал n8n, очереди и вебхуки; обеспечивал идемпотентную обработку задач и Docker-деплой.</li>
-          <li>Провёл миграцию данных, тестировал ETL и масштабировал серверную инфраструктуру.</li>
+          <li>Разработал RAG для документов и отзывов: Python API, векторный поиск и LLM в контуре клиента, а не как демо.</li>
+          <li>Построил идемпотентную обработку задач через n8n и вебхуки — интеграции не плодили дубли при повторных запусках.</li>
+          <li>Провёл миграцию данных и масштабирование серверной инфраструктуры без потери работоспособности.</li>
         </ul>
         <p class="tech">Python · n8n · Docker · PostgreSQL · RAG · LLM · REST API · Webhooks</p>
       </section>
@@ -246,20 +231,18 @@
       <h2>Образование</h2>
       <div class="edu">
         <p>
-          <strong>МГТУ им. Н. Э. Баумана</strong>
-          <span>2023 · Бакалавр, факультет биомедицинской техники · Автоматизация технологических процессов и производств</span>
-        </p>
-        <p>
-          <strong>Медицинский университет «Реавиз», Самара</strong>
-          <span>2017 · Стоматологический факультет</span>
+          <strong>МГТУ им. Н. Э. Баумана, Москва</strong>
+          <span>2019 — 2023 · Бакалавр, автоматизация технологических процессов и производств</span>
         </p>
       </div>
 
-      <h2>Подход</h2>
+      <h2>Языки</h2>
+      <p class="langs">Русский — родной · English — C1 (Advanced)</p>
+
+      <h2>Траектория</h2>
       <p class="qualities">
-        Самостоятельно ведёт задачи от анализа требований и TDR до production.
-        Работает и в стартап-режиме с быстрым MVP, и в BigTech со строгим code review.
-        Сочетает скорость поставки с инженерной дисциплиной: контракты, модульность и масштабируемость остаются приоритетом при сжатых сроках.
+        На старте сознательно брал проектные и стартап-роли, чтобы быстро собрать опыт AI-продуктов с нуля в разных доменах.
+        Сейчас ищу долгосрочную продуктовую позицию, где можно развивать одно направление.
       </p>
 
       <h2>Достижения</h2>

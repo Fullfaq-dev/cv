@@ -61,6 +61,9 @@ export function buildAiDocument() {
       languages: resume.languages,
       availability: resume.availability,
       telegram: profile.telegram,
+      email: profile.email,
+      phone: profile.phone,
+      site: profile.site,
       approach: resume.approach,
     },
     files: {
@@ -116,7 +119,10 @@ export function renderLlmsTxt() {
     `- Citizenship: ${doc.person.citizenship}`,
     `- Languages: ${doc.person.languages.map((item) => `${item.name} (${item.level})`).join(', ')}`,
     `- Availability: ${doc.person.availability}`,
+    `- Phone: ${doc.person.phone}`,
+    `- Email: ${doc.person.email}`,
     `- Telegram: ${doc.person.telegram}`,
+    `- Site: ${doc.person.site}`,
     '',
     '## Summary',
     doc.person.summary,
@@ -249,7 +255,10 @@ ${project.mediaHint ? `<p>mediaHint: ${esc(project.mediaHint)}</p>` : ''}
 <dt>Citizenship</dt><dd>${esc(doc.person.citizenship)}</dd>
 <dt>Languages</dt><dd>${esc(doc.person.languages.map((item) => `${item.name} (${item.level})`).join(', '))}</dd>
 <dt>Availability</dt><dd>${esc(doc.person.availability)}</dd>
+<dt>Phone</dt><dd><a href="tel:+79309917433">${esc(doc.person.phone)}</a></dd>
+<dt>Email</dt><dd><a href="mailto:${esc(doc.person.email)}">${esc(doc.person.email)}</a></dd>
 <dt>Telegram</dt><dd><a href="${esc(doc.person.telegram)}">${esc(doc.person.telegram)}</a></dd>
+<dt>Site</dt><dd><a href="${esc(doc.person.site)}">${esc(doc.person.site)}</a></dd>
 <dt>Resume PDF</dt><dd><a href="${esc(doc.files.resume_pdf)}">${esc(doc.files.resume_pdf)}</a></dd>
 <dt>Resume HTML</dt><dd><a href="${esc(doc.files.resume_html)}">${esc(doc.files.resume_html)}</a></dd>
 </dl>
