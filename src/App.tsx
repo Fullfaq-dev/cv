@@ -277,9 +277,9 @@ export default function App() {
         <section className="hero section">
           <div className="hero-meta">
             <span>portfolio / 2026</span>
-            <span>Москва · Remote</span>
+            <span>{profile.location}</span>
           </div>
-          <p className="eyebrow">AI product engineering / full stack</p>
+          <p className="eyebrow">AI product engineering / {profile.specialization}</p>
           <h1>Делаю сложные<br /><em>AI-системы</em> понятными.</h1>
           <div className="hero-bottom">
             <p>{profile.intro}</p>
@@ -398,7 +398,7 @@ export default function App() {
         <section id="resume" className="section resume-section">
           <p className="section-index">[ для заказчика ]</p>
           <h2>Резюме</h2>
-          <p className="resume-lead">PDF-резюме в оформлении портфолио: роль, стек и опыт. Можно открыть на сайте или скачать файл.</p>
+          <p className="resume-lead">Короткое резюме для рекрутера: роль, результаты и стек. Подробные кейсы — на этом сайте.</p>
           <div className="resume-cta">
             <button type="button" className="resume-button" onClick={() => setResumeOpen(true)}>Смотреть резюме</button>
             <a className="resume-button ghost" href={resume.pdf} download={resume.downloadName}>Скачать PDF ↓</a>
